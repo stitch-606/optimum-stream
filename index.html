@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Optimum Stream - Settings Guide</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <!-- Header Navigation Bar -->
+  <div class="header">
+    <div class="nav">
+      <span class="tab-button active" data-target="homeDiv">Home</span>
+      <span class="tab-button" data-target="guideDiv">Guide</span>
+      <span class="tab-button" data-target="onDemandDiv">On Demand</span>
+      <span class="tab-button" data-target="sportsDiv">Sports</span>
+      <span class="tab-button" data-target="dvrDiv">DVR</span>
+      <span class="tab-button" data-target="appsDiv">Apps</span>
+      <span class="icon"><i class="fas fa-search"></i></span>
+      <span class="icon tab-button" data-target="settingsDiv"><i class="fas fa-cog"></i></span>
+    </div>
+    <div class="nav-right">
+      <span class="logo">
+        <span class="optimum-word">Optimum</span><span class="optimum-dot">.</span>tv
+      </span>
+      <span class="time" id="current-time"></span>
+    </div>
+  </div>
+
+  <!-- Welcome Overlay -->
+  <div id="overlay" class="overlay">
+    <h1>Welcome to Stream</h1>
+  </div>
+
+  <!-- Apps Page -->
+  <div class="tab-content" id="appsDiv">
+    <div class="apps-container">
+      <h2>Apps</h2>
+      <div class="apps-sections">
+        <div class="apps-section">
+          <h3>Featured Apps</h3>
+          <div class="apps-grid">
+            <div class="app-item" data-app-id="optimum">
+              <img src="./assets/optTvApp.png" alt="Optimum TV">
+              <span>Optimum TV</span>
+            </div>
+            <div class="app-item">
+              <img src="./assets/netflexApp.png" alt="Netflix">
+              <span>Netflix</span>
+            </div>
+            <!-- Add more apps -->
+          </div>
+        </div>
+        <div class="apps-section">
+          <h3>System Apps</h3>
+          <div class="apps-grid">
+            <div class="app-item">
+              <img src="./assets/settingsApp.png" alt="Settings">
+              <span>Settings</span>
+            </div>
+            <div class="app-item">
+              <img src="./assets/playStoreSmall.jpg" alt="Play Store">
+              <span>Play Store</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Settings Page -->
+  <div class="tab-content" id="settingsDiv">
+    <div class="settings-container">
+      <div class="settings-wrapper">
+        <div class="settings-menu">
+          <h1>Settings</h1>
+          <h3 class="sub-header">Optimum TV</h3>
+
+          <button class="menu-button" data-settings="favorite-channels" data-text="You can set your favorite channels, then you can filter the guide to only show your favorite channels.">
+            Favorite Channels <span class="arrow">></span>
+          </button>
+
+          <button class="menu-button" data-settings="dvr" data-text="Set or update your DVR recording and storage preferences.">
+            DVR Preferences <span class="arrow">></span>
+          </button>
+
+          <button class="menu-button" data-settings="sap" data-text="Set the default language for Optimum TV. Not all programming offers alternate languages.">
+            Secondary Audio Program (SAP) <span class="arrow">></span>
+          </button>
+
+          <button class="menu-button" data-settings="parental" data-text="Parental Controls allow you to limit access to programming based on the rating or channel it appears on.">
+            Parental Controls <span class="arrow">></span>
+          </button>
+
+          <button class="menu-button" data-settings="pin" data-text="Create or enter a 4-digit code used to confirm movie rentals and charges to your service.">
+            Purchase PIN <span class="arrow">></span>
+          </button>
+
+          <button class="menu-button" data-settings="default-channel" data-text="You can change the channel that your Optimum TV services will start on.">
+            Default Channel <span class="arrow">News 12</span>
+          </button>
+
+          <button class="menu-button" data-settings="account" data-text="View and manage your Optimum account settings.">
+            My Account <span class="arrow">></span>
+          </button>
+
+          <h3 class="sub-header">General</h3>
+
+          <button class="menu-button" data-settings="accessibility" data-text="Access accessibility settings such as Closed Captions and Talkback.">
+            Accessibility <span class="arrow">></span>
+          </button>
+
+          <button class="menu-button" data-settings="device" data-text="Access to Network and WiFi, Remote Control, and other settings for your Optimum Stream." id="deviceSettingsBtn">
+            Device & Remote Settings <span class="arrow">></span>
+          </button>
+
+          <button class="menu-button" data-settings="help" data-text="Get help with your Optimum Stream device and services.">
+            Help <span class="arrow">></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Settings Right Panel Stack -->
+    <div class="right-panel-stack"></div>
+    <div class="settings-description">
+      <p id="description-text"></p>
+    </div>
+  </div>
+
+  <!-- Other content sections -->
+  <div class="tab-content active" id="homeDiv">
+    <div class="featured-program">
+      <h2>News 12</h2>
+      <p>Live: Breaking News Coverage</p>
+      <div class="channel-info">
+      </div>
+      <div class="buttons">
+        <button class="watch-now">Watch Now</button>
+        <button class="more-info">More Info</button>
+      </div>
+    </div>
+
+    <div class="recent-channels">
+      <h3 class="sub-header">Recent Channels</h3>
+      <div class="channel-list">
+        <img src="./assets/amcMedia.jpg" alt="AMC">
+        <img src="./assets/historyChannel.jpg" alt="History Channel">
+        <img src="./assets/news12Channel.png" alt="News 12">
+        <img src="./assets/tlcChannel.png" alt="TLC">
+        <img src="./assets/chedderChannel.jpg" alt="Chedder">
+      </div>
+    </div>
+
+    <div class="favorite-apps">
+      <h3 class="sub-header">Favorite Apps</h3>
+      <div class="app-list">
+        <img src="./assets/netflexApp.png" alt="Netflix">
+        <img src="./assets/primeVideoApp.jpg" alt="Prime Video">
+        <img src="./assets/maxApp.jpeg" alt="Max">
+        <img src="./assets/appleTvApp.jpg" alt="Apple TV">
+        <img src="./assets/starzPlayApp.jpg" alt="Starz">
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-content" id="guideDiv">
+    <h1>Guide<br>NO CONTENT AVAILABLE... YET</h1>
+  </div>
+
+  <div class="tab-content" id="onDemandDiv">
+    <h1>On Demand<br>NO CONTENT AVAILABLE... YET</h1>
+  </div>
+
+  <div class="tab-content" id="sportsDiv">
+    <h1>Sports<br>NO CONTENT AVAILABLE... YET</h1>
+  </div>
+
+  <div class="tab-content" id="dvrDiv">
+    <h1>DVR<br>NO CONTENT AVAILABLE... YET</h1>
+  </div>
+
+  <!-- Templates -->
+  <template id="device-menu-template">
+    <div class="right-panel">
+      <div class="right-panel-header">
+        <button class="back-button">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <h2>Device & Remote Settings</h2>
+      </div>
+      <div class="right-panel-content">
+        <div class="settings-menu-list">
+          <!-- Menu items will be added dynamically -->
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <template id="wifi-panel-template">
+    <div class="wifi-status">
+      <div class="wifi-toggle">
+        <span>Wi-Fi</span>
+        <label class="switch">
+          <input type="checkbox" id="wifi-toggle" checked>
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <p class="wifi-name">Connected to: <span id="current-network">Not connected</span></p>
+    </div>
+    <div class="wifi-list">
+      <h3>Available Networks</h3>
+      <div class="network-list" id="network-list">
+        <!-- Networks will be added dynamically -->
+      </div>
+    </div>
+  </template>
+
+  <template id="display-panel-template">
+    <div class="panel-content">
+      <!-- Content will be added dynamically -->
+    </div>
+  </template>
+
+  <template id="remote-panel-template">
+    <div class="panel-content">
+      <!-- Content will be added dynamically -->
+    </div>
+  </template>
+
+  <template id="storage-panel-template">
+    <div class="panel-content">
+      <!-- Content will be added dynamically -->
+    </div>
+  </template>
+
+  <template id="about-panel-template">
+    <div class="panel-content">
+      <!-- Content will be added dynamically -->
+    </div>
+  </template>
+
+  <template id="app-settings-template">
+    <div class="right-panel">
+      <div class="right-panel-header">
+        <button class="back-button">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <h2>App Settings</h2>
+      </div>
+      <div class="right-panel-content">
+        <div class="app-info">
+          <div class="app-header">
+            <img src="./assets/settingsApp.png" alt="" class="app-icon">
+            <div class="app-details">
+              <h3 class="app-name"></h3>
+              <p class="app-version">Version 1.0.0</p>
+            </div>
+          </div>
+          <div class="app-actions">
+            <button class="action-button" data-action="force-stop">Force Stop</button>
+            <button class="action-button" data-action="clear-data">Clear Data</button>
+            <button class="action-button" data-action="clear-cache">Clear Cache</button>
+          </div>
+          <div class="app-storage">
+            <h4>Storage</h4>
+            <div class="storage-info">
+              <div class="storage-item">
+                <span>Total Space</span>
+                <span class="storage-value">1.2 GB</span>
+              </div>
+              <div class="storage-item">
+                <span>App Data</span>
+                <span class="storage-value">800 MB</span>
+              </div>
+              <div class="storage-item">
+                <span>Cache</span>
+                <span class="storage-value">400 MB</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <script src="settings.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
